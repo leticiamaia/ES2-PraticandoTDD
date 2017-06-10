@@ -9,7 +9,7 @@ public class Cliente {
 	public Cliente(String nome, Date dataDeInclusão, Estado estado) {
 		this.setNome(nome);
 		this.setDataDeInclusão(dataDeInclusão);
-		this.setEstado(estado);
+		this.setEstado(estado); 
 	}
 
 	public String getNome() {
