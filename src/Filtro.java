@@ -16,10 +16,7 @@ public class Filtro {
 					&& (isMonthBefore(fatura.getData(), new Date(), 3))) {
 				faturas.remove(i);
 			} else if(fatura.getValor() >= 4000 &&
-					(fatura.getCliente().getEstado().equals(Estado.RS) ||
-					 fatura.getCliente().getEstado().equals(Estado.SC) ||
-					 fatura.getCliente().getEstado().equals(Estado.PR)
-							)) {
+					(fatura.getCliente().getEstado().getRegion().equals("S"))) {
 				faturas.remove(i);
 			}
 		}

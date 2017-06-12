@@ -72,4 +72,15 @@ public class FiltroTest {
 		
 		Assert.assertEquals(0, (filtro.filtrar(faturas).size()));
 	}
+	
+	@Test
+	public void testaNaoDeletaNada() { 
+		valor = 3010.0;
+		estado = Estado.RS;
+		cliente = new Cliente(nome, dataDeInclusão, estado);
+		fatura1 = new Fatura(codigo, valor, data, cliente); 
+		faturas.add(fatura1);
+		
+		Assert.assertEquals(1, (filtro.filtrar(faturas).size()));
+	}
 }
